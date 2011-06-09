@@ -8,5 +8,6 @@ but first I need to finish the following :
 
 * caching
 * stability
+* flexibility
 * history
 * etc
