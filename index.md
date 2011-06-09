@@ -11,3 +11,5 @@ but first I need to finish the following :
 * flexibility
 * history
 * etc
+
+I also need to listen to more Frank Zappa while coding...
