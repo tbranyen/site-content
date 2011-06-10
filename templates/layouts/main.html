@@ -14,5 +14,11 @@
   <section id="content">
     {{content}}
   </section>
+
+  <nav>
+    {%each history%}
+    <span><a href="/index/{{.}}">{{.}}</a></span>
+    {%endeach%}
+  </nav>
 </body>
 </html>
