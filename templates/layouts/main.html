@@ -16,11 +16,9 @@
   </section>
 
   <nav>
-    {%if history%}
-      {%each history%}
-        <a href="/index/{{.}}">{{.}}</a>
-      {%endeach%}
-    {%endif%}
+    {%each history%}
+      <a href="/index/{{.}}">{{.}}</a><br>
+    {%endeach%}
   </nav>
 </body>
 </html>
