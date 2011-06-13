@@ -16,9 +16,9 @@
   </section>
 
   <nav>
-    {%for commit in history%}
-      <a href="/index/{{commit.sha}}">{{commit.sha}}</a>
-    {%endfor%}
+    {%each history%}
+      <a href="/index/{{.}}">{{.}}</a>
+    {%endeach%}
   </nav>
 </body>
 </html>
