@@ -17,7 +17,7 @@
 
   <nav>
     {%each history%}
-      <a href="/index/{{.}}">{{.}}</a><br>
+      <a href="/index/{{.}}">{{.|trim 7}}</a><br>
     {%endeach%}
   </nav>
 </body>
