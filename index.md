@@ -17,3 +17,5 @@ I also need to listen to more Frank Zappa while coding...
 This is another random commit
 
 Last random commit... for NOW!
+
+This comment isn't random nor the last, testing bare repo reading after a push.
