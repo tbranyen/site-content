@@ -7,18 +7,15 @@
   <title>Main</title>
 </head>
 <body>
-  <!-- {{sha}} -->
-
-  <nav>posts - projects - photos</nav>
 
   <section id="content">
-    {{content}}
+    {%partial content%}
   </section>
 
-  <nav>
-    {%each history%}
-      <a href="/index/{{.}}">{{.|trim 7}}</a><br>
-    {%endeach%}
-  </nav>
+  <script src="/assets/js/libs/highlight.js"></script>
+  <script>
+    hljs.tabReplace = '    ';
+    hljs.initHighlightingOnLoad();
+  </script>
 </body>
 </html>
