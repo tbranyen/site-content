@@ -5,11 +5,13 @@ ltn12 = require("ltn12");
  
 -- Function to reverse ip octets
 function ReverseIPOctets(_ip)
-    local octets = {}; 
-    string.gsub(_ip .. ".", "([%d]*)[%.]", function(_s)
-	table.insert(octets,_s);
-    end);
-    return octets[4] .. "." .. octets[3] .. "." .. octets[2] .. "." .. octets[1];
+  local octets = {}; 
+
+  string.gsub(_ip .. ".", "([%d]*)[%.]", function(_s)
+    table.insert(octets,_s);
+  end);
+
+  return octets[4] .. "." .. octets[3] .. "." .. octets[2] .. "." .. octets[1];
 end
  
 -- Get the current WAN address for this machine
