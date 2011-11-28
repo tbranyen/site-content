@@ -18,4 +18,6 @@ DOM.  Configuration is minimal to get it working with various engines
 Make sure to check out the screencast I created which explains exactly
 how to get started with LayoutManager:
 
+[Screencast Source](https://raw.github.com/tbranyen/site-content/master/posts/backbone-layoutmanager/assets/files.zip)
+
 <iframe src="http://player.vimeo.com/video/32765088?title=0&amp;byline=0&amp;portrait=0" width="720" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
