@@ -20,4 +20,9 @@ how to get started with LayoutManager:
 
 [Screencast Source](https://raw.github.com/tbranyen/site-content/master/posts/backbone-layoutmanager/assets/example.zip)
 
-<iframe src="http://player.vimeo.com/video/32765088?title=0&amp;byline=0&amp;portrait=0" width="720" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+*(In order to run the example source code, you will need to use an HTTP server.)*
+
+For more information, [check out this GitHub issue](https://github.com/tbranyen/backbone.layoutmanager/issues/17)
+
+<iframe src="http://player.vimeo.com/video/32765088?title=0&amp;byline=0&amp;portrait=0"
+width="720" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
