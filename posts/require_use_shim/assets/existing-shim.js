@@ -1,4 +1,4 @@
-define(["underscore", "jquery", "order!backbone"], function() {
+define(["order!underscore", "order!jquery", "order!backbone"], function() {
   return window.Backbone;
 });
 
