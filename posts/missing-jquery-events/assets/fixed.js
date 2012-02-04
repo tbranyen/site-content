@@ -5,5 +5,5 @@ el.click(function() {
 });
  
 $("body").empty().append(el);
-$(el).detach();
+el.detach();
 $("body").empty().append(el);
