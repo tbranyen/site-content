@@ -59,8 +59,8 @@ You can see the plugin being used as well inside the Backbone dependencies.
 Simply call the module with the plugin syntax `use!module_name` and it will
 look to the `use` property inside your configuration to resolve.
 
-The code is on GitHub [as a Gist](https://gist.github.com/1604128) please
-check it out and let me know what you think.
+The code is on [GitHub](http://github.com/tbranyen/use.js) please check it out
+and let me know what you think.
 
 I have also integrated this plugin into the Backbone Boilerplate in a special
 [amd branch](https://github.com/tbranyen/backbone-boilerplate/tree/amd).
