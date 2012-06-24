@@ -26,5 +26,9 @@ A sample View that auto-updates might look something like this:
 This makes it much easier to drive your Views with a loading indicator and then
 have them rendered once the `Collection/Model` has been populated or changed.
 
+The fetch event works great for when data is currently being loaded, if you
+want to know when data has successfully been sync'd from the server, simply
+use the `sync` event on the `Collection/Model`.
+
 I would love to see this event made into Backbone core, so that I no longer
 have to patch it directly.
