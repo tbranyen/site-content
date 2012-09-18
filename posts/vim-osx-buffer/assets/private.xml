@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+      <name>VIM Fix</name>
+      <appendix>Change Ctrl+6 to Ctrl+Shift+6</appendix>
+      <identifier>vim.owns.whatever.fix</identifier>
+      <autogen>
+        --KeyToKey--
+        KeyCode::KEY_6, ModifierFlag::CONTROL_L,
+        KeyCode::KEY_6, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L
+      </autogen>
+    </item>
+</root>
