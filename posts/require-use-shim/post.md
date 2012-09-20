@@ -1,4 +1,4 @@
-title: 'AMD/RequireJS Shim Plugin for Loading Incompatible JavaScript'
+title: 'AMD/RequireJS shim plugin for loading incompatible JavaScript'
 tags: ['amd', 'require.js', 'javascript']
 posted: new Date('1/13/2012')
 

@@ -1,4 +1,4 @@
-title: 'Increasing Javascript Array Sorting Performance'
+title: 'Increasing Javascript array sorting performance'
 tags: ['javascript', 'performance']
 posted: new Date('12/8/2009')
 

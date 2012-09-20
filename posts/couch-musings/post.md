@@ -1,4 +1,4 @@
-title: 'Thoughts on Development using CouchDB with Node.js'
+title: 'Thoughts on development using CouchDB with Node.js'
 tags: ['couchdb', 'node', 'javascript']
 posted: new Date('5/16/2012')
 

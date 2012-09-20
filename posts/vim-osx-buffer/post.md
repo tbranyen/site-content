@@ -1,4 +1,4 @@
-title: 'OS X Vim Control-6 Buffer Toggling Fix'
+title: 'OS X Vim control-6 buffer toggling fix'
 tags: ['vim', 'xml', 'osx']
 posted: new Date('9/18/2012')
 
