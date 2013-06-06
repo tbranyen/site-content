@@ -2,6 +2,11 @@ title: 'Generating RSS feeds from a Backbone.js Collection in Node.js'
 tags: ['backbone', 'node.js', 'javascript', 'rss']
 posted: new Date('11/30/2011')
 
+**The awesome Anja Skrba has generously translated this post into
+Serbo-Croatian and made it available
+[here](http://science.webhostinggeeks.com/rss-povratne-informacije) for
+viewing.**
+
 When designing and developing this site, I wasn't entirely sold on using
 Backbone structures on the server-side. The benefits weren't immediately
 clear.  Although after creating the blog using `Models`, `Collections` and 
