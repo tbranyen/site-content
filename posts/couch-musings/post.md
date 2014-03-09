@@ -138,7 +138,7 @@ sure there is an NPM module out there someplace that does exactly this...
 **Design document synchronization**
 
 This was the biggest pain point for me.  As I mentioned before, I used the
-excellent couchapp tool by [Mikael Rogers](https://github.com/mikeal), to
+excellent couchapp tool by [Mikeal Rogers](https://github.com/mikeal), to
 synchronize my design documents to CouchDB.
 
 Unfortunately, his design decision was to only allow a single design document
