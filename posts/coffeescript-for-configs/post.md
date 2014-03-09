@@ -49,18 +49,16 @@ syntax instead of JavaScript.
 Here's a basic example of what a configuration file could look like to lint a
 project file.
 
-<div class="clearfix">
-  <div style="float: left; width: 49%;">
+<div class="inline_code_block">
   <h5>CoffeeScript</h5>
   <hr>
   {{'basic.coffee'|render}}
-  </div>
+</div>
 
-  <div style="float: right; width: 49%">
+<div class="inline_code_block">
   <h5>JavaScript</h5>
   <hr>
   {{'basic.js'|render}}
-  </div>
 </div>
 
 ##### Comparison breakdown #####
@@ -88,18 +86,16 @@ One of the reasons for choosing CoffeeScript over YAML is that it's dynamic and
 compiles down to JavaScript.  This means you can write functions inside of your
 configurations.
 
-<div class="clearfix">
-  <div style="float: left; width: 49%;">
+<div class="inline_code_block">
   <h5>CoffeeScript</h5>
   <hr>
   {{'advanced.coffee'|render}}
-  </div>
+</div>
 
-  <div style="float: right; width: 49%">
+<div class="inline_code_block">
   <h5>JavaScript</h5>
   <hr>
   {{'advanced.js'|render}}
-  </div>
 </div>
 
 ##### Inline JavaScript #####
@@ -121,18 +117,16 @@ Alman](http://benalman.com/) review the post, he mentioned that I could use
 YAML and require that in for the declarative portions of the Grunt
 configuration.
 
-<div class="clearfix">
-  <div style="float: left; width: 49%;">
+<div class="inline_code_block">
   <h5>YAML / <code>config.yaml</code></h5>
   <hr>
   {{'config.yaml'|render}}
-  </div>
+</div>
 
-  <div style="float: right; width: 49%">
+<div class="inline_code_block">
   <h5>Grunt / <code>Gruntfile.js</code></h5>
   <hr>
   {{'yaml.Gruntfile.js'|render}}
-  </div>
 </div>
 
 #### Example without Grunt ####
@@ -141,18 +135,16 @@ configuration.
 If you are using your own build system that is only expecting an object, the
 configuration will look **even better**!
 
-<div class="clearfix">
-  <div style="float: left; width: 49%;">
+<div class="inline_code_block">
   <h5>CoffeeScript</h5>
   <hr>
   {{'object.coffee'|render}}
-  </div>
+</div>
 
-  <div style="float: right; width: 49%">
+<div class="inline_code_block">
   <h5>JavaScript</h5>
   <hr>
   {{'object.js'|render}}
-  </div>
 </div>
 
 #### Decide for yourself ####
