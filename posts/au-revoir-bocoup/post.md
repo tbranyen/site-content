@@ -1,4 +1,5 @@
 title: 'Au revoir Bocoup, bonjour Matchbox!'
+hidden: true
 tags: ['professional']
 posted: new Date('9/21/2012')
 
