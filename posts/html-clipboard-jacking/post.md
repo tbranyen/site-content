@@ -5,7 +5,7 @@ posted: new Date('5/20/2015')
 Today I learned from [Guillermo
 Rauch](https://twitter.com/rauchg/status/601187683529039872) that Google Chrome
 43 is now shipping, on both desktop and mobile, with the ability to modify the
-system clipboard.  This is awesome, and as evidenced by the over 200 retweets
+system clipboard.  This is awesome! And as evidenced by the over 200 retweets
 he gained, developers are excited to be able to finally drop the dependence on
 Flash for this feature.  You can read more about it here on
 [HTML5Rocks](http://updates.html5rocks.com/2015/04/cut-and-copy-commands).
