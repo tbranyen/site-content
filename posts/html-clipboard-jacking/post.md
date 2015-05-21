@@ -51,7 +51,8 @@ Q: So how did Chrome screw this up?  **A: They do not prompt for clipboard acces
 ******
 
 The demo I created below, was done in a few minutes with just a "hidden"
-textarea trick and a `mouseup` event that is incredibly common.
+textarea trick and a `mouseup` event that is incredibly common.  If the demo
+below fails to work for you, that's good news (for you)!  You won't be affected.
 
 <iframe width="100%" height="300px" src="//jsfiddle.net/azgugmjb/7/embedded/result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
@@ -60,6 +61,12 @@ all cases, the browser would allow me to select and then copied bogus nonsense
 into my clipboard.  Even worse, is that in the desktop version of Chrome, the
 use of `textarea.select()` actually deselects the text, making it impossible to
 do a real operating system level copy command.
+
+For an even more elaborate demo, check out [this
+fork](http://jsfiddle.net/wxp7b818/) by [Patrick
+Kettner](https://twitter.com/patrickkettner/status/601242248790016000).  In his
+example the text remains selected, meaning the user would have even less of an
+idea that their clipboard was being affected.
 
 I've voiced my findings in a [Mozilla Dev Platform Google Group discussing the
 intent to implement and ship this
