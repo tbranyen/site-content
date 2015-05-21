@@ -150,15 +150,7 @@ synchronize any number of design documents at once.
 
 My filesystem structure looked like this:
 
-```
-couch
-├── design_docs
-│   ├── sentiment.js
-│   ├── traffic.js
-│   └── tweets.js
-├── index.js
-└── package.json
-```
+{{'filesystem.sh'|render}}
 
 A design document looked something like this:
 
