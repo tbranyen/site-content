@@ -58,7 +58,7 @@ project file.
 <div class="inline_code_block">
   <h5>JavaScript</h5>
   <hr>
-  {{'basic.js'|render}}
+  {{'basic.js'|render 'javascript'}}
 </div>
 
 ##### Comparison breakdown #####
@@ -95,7 +95,7 @@ configurations.
 <div class="inline_code_block">
   <h5>JavaScript</h5>
   <hr>
-  {{'advanced.js'|render}}
+  {{'advanced.js'|render 'javascript'}}
 </div>
 
 ##### Inline JavaScript #####

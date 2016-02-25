@@ -20,7 +20,7 @@ module.exports = function() {
   // Load external Grunt task plugins.
   this.loadNpmTasks("grunt-contrib-jshint");
 
-  # Running CasperJS behavioral tests.
+  // Running CasperJS behavioral tests.
   this.registerTask("casper", "Execute CasperJS tests.", function() {
     var done = this.async();
 
