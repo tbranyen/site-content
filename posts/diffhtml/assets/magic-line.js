@@ -1,0 +1,1 @@
+document.documentElement.diffOuterHTML = templateOutput;
