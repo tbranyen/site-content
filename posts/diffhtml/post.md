@@ -25,8 +25,8 @@ in the future. A stack that shows strong developer community support is an
 obvious qualifier for consideration over fringe side projects or well written,
 but not maintained codebases. 
 
-Why bring the long previous paragraph up? Because, what are typically not
-considered, are modern browser standards. This is probably due to [low browser
+What are typically not considered, are modern browser standards. This is
+probably due to [low browser
 support](http://caniuse.com/#search=web%20components), inconsistent or
 [outdated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/content)
 specification resources, [slow
