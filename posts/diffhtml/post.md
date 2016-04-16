@@ -1,6 +1,6 @@
 title: 'Improving the DOM with diffHTML experiments'
 tags: ['virtual dom', 'react', 'custom elements', 'transitions']
-posted: new Date('2/29/2016')
+posted: new Date('4/20/2016')
 
 <style>
   img.kiwi {
@@ -17,13 +17,11 @@ posted: new Date('2/29/2016')
 <script>diff.enableProllyfill();</script>
 
 When starting a new web application project, you'll typically pick a client
-side framework as well as tooling that works best with it. I think most would
-agree that structuring a project around easily Google-able technology is a good
-idea over a completely custom in-house solution. Technology choices are made to
-assemble a stack that won't get in your, or the future maintainer's way now or
-in the future. A stack that shows strong developer community support is an
-obvious qualifier for consideration over fringe side projects or well written,
-but not maintained codebases. 
+side framework as well as tooling that works well with it. Technology choices
+are made to assemble a stack that won't get into your, or the future
+maintainer's way, now or in the future. A stack that shows strong developer
+community support is an obvious qualifier for consideration over fringe side
+projects, or well written, but unmaintained codebases. 
 
 What are typically not considered, are modern browser standards. This is
 probably due to [low browser
@@ -31,7 +29,7 @@ support](http://caniuse.com/#search=web%20components), inconsistent or
 [outdated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/content)
 specification resources, [slow
 polyfills](https://www.polymer-project.org/1.0/articles/shadydom.html#shadow-dom-is-awesome-why-is-there-a-shady-dom),
-and lack of useful features that match up with modern frameworks.  Some of the
+and lack of useful features that match up with modern frameworks. Some of the
 missing *standard* features that I noticed in the last application I wrote are:
 
 * **State management**&nbsp;&nbsp;
@@ -52,7 +50,7 @@ future of the web, such as [Web
 Components](https://github.com/w3c/webcomponents/). Google took an
 initial stab at what this could look like with the [Polymer
 project](https://www.polymer-project.org/1.0/), which attempted to get
-developers to structure reusable components like this:
+developers structuring reusable components like this:
 
 {{"polymer-element-0.5.html"|render "html"}}
 
@@ -62,9 +60,11 @@ short-sighted issues, such as: how to apply code coverage or bundle into a
 pre-HTTP 2.0 optimized file? The browser equivalent of this solution
 [apparently off the standards
 track](http://lists.w3.org/Archives/Public/public-webapps/2013JulSep/0287.html)
-which looked awkward and unnecessary in my opinion.
+which looked awkward and superfluous in my opinion. The idea here is putting
+JavaScript into your HTML instead of following React and company's approach of
+"HTML" in your JavaScript.
 
-Those problems can be avoiding by using the [Web Components
+Those problems can be avoided by using the [Web Components
 polyfills](http://webcomponents.org/polyfills/), but I found them to not work
 particularly well, they need to modify too much of your environment to work
 properly. They also only provide the minimal features Web Components are
