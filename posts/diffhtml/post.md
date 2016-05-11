@@ -1,6 +1,6 @@
-title: 'Improving the DOM with diffHTML experiments'
-tags: ['virtual dom', 'react', 'custom elements', 'transitions']
-posted: new Date('2/29/2016')
+title: 'Improving the DOM with HTML experiments'
+tags: ['virtual dom', 'react', 'custom elements', 'web components']
+posted: new Date('4/20/2016')
 
 <style>
   img.kiwi {
@@ -13,20 +13,23 @@ posted: new Date('2/29/2016')
   }
 </style>
 
-<script src="/post/improving-the-dom-with-diffhtml-experiments/assets/diffhtml.js"></script>
+<script src="/post/improving-the-dom-with-html-experiments/assets/diffhtml.js"></script>
 <script>diff.enableProllyfill();</script>
 
-When starting a new web application project, you'll typically pick a client
-side framework as well as tooling that works best with it. I think most would
-agree that structuring a project around easily Google-able technology is a good
-idea over a completely custom in-house solution. Technology choices are made to
-assemble a stack that won't get in your, or the future maintainer's way now or
-in the future. A stack that shows strong developer community support is an
-obvious qualifier for consideration over fringe side projects or well written,
-but not maintained codebases. 
+Starting on a brand new web application involves making important specific
+technology choices such as build tools, frameworks, and development
+environments. These decisions help assemble a stack that hopefully won't get
+into your, or the future maintainer's, way. 
 
-What are typically not considered, are modern browser standards. This is
-probably due to [low browser
+React and Redux are a really powerful combination, Ember & Angular have strong
+community & tooling, and both Polymer & Riot have done a unique spin on Web
+Components, but are both deviations from the specifications through abstraction
+and non-standard syntax. And now we're seeing lightweight virtual DOM libraries
+heavily [inspired](https://preactjs.com) [by](http://infernojs.org/) React.
+
+What are typically not considered are raw modern browser standards. 
+
+left hoping This is probably due to [low browser
 support](http://caniuse.com/#search=web%20components), inconsistent or
 [outdated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/content)
 specification resources, [slow
@@ -86,7 +89,7 @@ Components specification.
 
 #### Introducing <a href="https://github.com/tbranyen/diffhtml">diffHTML...</a>
 
-<img class="kiwi" src="/post/improving-the-dom-with-diffhtml-experiments/assets/kiwi.png">
+<img class="kiwi" src="/post/improving-the-dom-with-html-experiments/assets/kiwi.png">
 
 ...as a passion-project I've been pushing code to since the initial commit on
 April 15, 2015. I've gotten it to a stable point where I'd like to invite
