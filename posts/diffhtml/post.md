@@ -1,19 +1,8 @@
-title: 'Improving the DOM with HTML experiments'
-tags: ['virtual dom', 'react', 'custom elements', 'web components']
-posted: new Date('4/20/2016')
+title: 'The Art of HTML'
+tags: ['virtual dom', 'react', 'diffhtml', 'html']
+posted: new Date('6/15/2016')
 
-<style>
-  img.kiwi {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    margin: 0;
-    width: 64px;
-    float: left;
-    margin-right: 25px !important;
-  }
-</style>
-
-<script src="/post/improving-the-dom-with-html-experiments/assets/diffhtml.js"></script>
+<script src="/post/the-art-of-html/assets/diffhtml.js"></script>
 <script>diff.enableProllyfill();</script>
 
 Starting on a brand new web application involves making important specific
@@ -21,13 +10,18 @@ technology choices such as build tools, frameworks, and development
 environments. These decisions help assemble a stack that hopefully won't get
 into your, or the future maintainer's, way. 
 
-React and Redux are a really powerful combination, Ember & Angular have strong
+There are three fundamental technologies that form the triforce of web
+development: HTML, JS, & CSS. 
+
+<!--React and Redux are a really powerful combination, Ember & Angular have strong
 community & tooling, and both Polymer & Riot have done a unique spin on Web
 Components, but are both deviations from the specifications through abstraction
 and non-standard syntax. And now we're seeing lightweight virtual DOM libraries
-heavily [inspired](https://preactjs.com) [by](http://infernojs.org/) React.
+heavily [inspired](https://preactjs.com) [by](http://infernojs.org/) React.-->
 
 What are typically not considered are raw modern browser standards. 
+
+<img src="/post/the-art-of-html/assets/first-website.jpg">
 
 left hoping This is probably due to [low browser
 support](http://caniuse.com/#search=web%20components), inconsistent or
@@ -88,8 +82,6 @@ that I listed earlier, with intentions of being pushed as extensions to the Web
 Components specification.
 
 #### Introducing <a href="https://github.com/tbranyen/diffhtml">diffHTML...</a>
-
-<img class="kiwi" src="/post/improving-the-dom-with-html-experiments/assets/kiwi.png">
 
 ...as a passion-project I've been pushing code to since the initial commit on
 April 15, 2015. I've gotten it to a stable point where I'd like to invite
