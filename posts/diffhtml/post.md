@@ -1,8 +1,8 @@
-title: 'The Art of HTML'
+title: 'React Gave Us The Render'
 tags: ['virtual dom', 'react', 'diffhtml', 'html']
-posted: new Date('6/15/2016')
+posted: new Date('4/20/2017')
 
-<script src="/post/the-art-of-html/assets/diffhtml.js"></script>
+<script src="/post/react-gave-us-the-render/assets/diffhtml.js"></script>
 <script>diff.enableProllyfill();</script>
 
 Starting on a brand new web application involves making important specific
@@ -21,7 +21,7 @@ heavily [inspired](https://preactjs.com) [by](http://infernojs.org/) React.-->
 
 What are typically not considered are raw modern browser standards. 
 
-<img src="/post/the-art-of-html/assets/first-website.jpg">
+<img src="/post/react-gave-us-the-render/assets/first-website.jpg">
 
 left hoping This is probably due to [low browser
 support](http://caniuse.com/#search=web%20components), inconsistent or
