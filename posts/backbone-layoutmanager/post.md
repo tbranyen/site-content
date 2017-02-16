@@ -13,7 +13,7 @@ layouts and templates, the rendering in any engine, and assembling into the
 DOM.  Configuration is minimal to get it working with various engines
 (Mustache/Handlebars) and transport methods (DOM/AJAX).
 
-[GitHub Project Page](http://github.com/tbranyen/backbone.layoutmanager)
+[GitHub Project Page](https://github.com/tbranyen/backbone.layoutmanager)
 
 Make sure to check out the screencast I created which explains exactly
 how to get started with LayoutManager:
@@ -24,5 +24,5 @@ how to get started with LayoutManager:
 
 For more information, [check out this GitHub issue](https://github.com/tbranyen/backbone.layoutmanager/issues/17)
 
-<iframe src="http://player.vimeo.com/video/32765088?title=0&amp;byline=0&amp;portrait=0"
+<iframe src="https://player.vimeo.com/video/32765088?title=0&amp;byline=0&amp;portrait=0"
 width="720" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
