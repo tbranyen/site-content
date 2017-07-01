@@ -1,42 +1,46 @@
-title: 'Moving beyond innerHTML'
+title: 'Going beyond innerHTML'
 tags: ['virtual dom', 'react', 'diffhtml', 'html']
 posted: new Date('8/18/2017')
 
 <script src="/post/react-gave-us-the-render/assets/diffhtml.js"></script>
-<script>diff.enableProllyfill();</script>
 
+<style>
+  #html {
+    cursor: pointer; 
+  }
+</style>
 
-Starting on a brand new web application involves making important specific
-technology choices such as build tools, frameworks, and development
-environments. These decisions help assemble a stack that hopefully won't get
-into your, or the future maintainer's, way. 
+I put a lot of *trust* in the web. Ever since I wrote my first HTML document
+<small>(shown below)</small>; a tutorial on how to learn HTML. I taught myself
+the markup syntax since I wanted to use the source view on Homestead instead of
+the GUI. What you learn is that the beauty of HTML isn't so much its
+simplicity, so much as its *forgiving* and *giving* nature. You can write a
+bunch of not-so-well-formed markup and you get something back, <small>(notice
+anything off in my markup below)</small>? It's rewarding with real low-grade
+effort. The exact kind that is necessary to get interested. It enables small
+wins that capture interest and get you wanting more. The web primitives empower
+and pave a path for building and sharing, theoretically without getting
+frustrated. But, the reality is that memorizing HTML tags and CSS properties
+only gets you so far. JavaScript becomes a necessary evil to learn and
+understand in order to make your page interactive and functional.
 
-There are three fundamental technologies that form the triforce of web
-development: HTML, JS, & CSS. 
+<a href="/post/going-beyond-innerhtml/assets/html.jpg">
+  <img
+    alt="My first HTML file..."
+    src="/post/going-beyond-innerhtml/assets/html.jpg"
+    width="80%"
+  />
+</a>
+
+This is a long-winded way 
+
+What if new developers could take this knowledge:
+
+{{'hello-world-what-next.js'|render}}
 
 What are typically not considered are raw modern browser standards. 
 
 <img src="/post/react-gave-us-the-render/assets/first-website.jpg">
-
-left hoping This is probably due to [low browser
-support](http://caniuse.com/#search=web%20components), inconsistent or
-[outdated](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/content)
-specification resources, [slow
-polyfills](https://www.polymer-project.org/1.0/articles/shadydom.html#shadow-dom-is-awesome-why-is-there-a-shady-dom),
-and lack of useful features that match up with modern frameworks.  Some of the
-missing *standard* features that I noticed in the last application I wrote are:
-
-* **State management**&nbsp;&nbsp;
-  *Redux*
-* **Reactive rendering**&nbsp;&nbsp;
-  *React*
-* **Routing control**&nbsp;&nbsp;
-  *React Router, Redux Router, Backbone, and Ember*
-<hr>
-* **Eventing**&nbsp;&nbsp;
-  *Delegation and click outside*
-* **Transitions**&nbsp;&nbsp;
-  *Reacting to elements and attributes entering, leaving, or mutating in the DOM*
 
 While many of these issues may never be accounted for in the browser standard
 API, vendors have taken notice of developer trends and are helping shape the
