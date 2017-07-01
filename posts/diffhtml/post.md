@@ -1,9 +1,10 @@
-title: 'React Gave Us The Render'
+title: 'Moving beyond innerHTML'
 tags: ['virtual dom', 'react', 'diffhtml', 'html']
-posted: new Date('4/20/2017')
+posted: new Date('8/18/2017')
 
 <script src="/post/react-gave-us-the-render/assets/diffhtml.js"></script>
 <script>diff.enableProllyfill();</script>
+
 
 Starting on a brand new web application involves making important specific
 technology choices such as build tools, frameworks, and development
@@ -12,12 +13,6 @@ into your, or the future maintainer's, way.
 
 There are three fundamental technologies that form the triforce of web
 development: HTML, JS, & CSS. 
-
-<!--React and Redux are a really powerful combination, Ember & Angular have strong
-community & tooling, and both Polymer & Riot have done a unique spin on Web
-Components, but are both deviations from the specifications through abstraction
-and non-standard syntax. And now we're seeing lightweight virtual DOM libraries
-heavily [inspired](https://preactjs.com) [by](http://infernojs.org/) React.-->
 
 What are typically not considered are raw modern browser standards. 
 
