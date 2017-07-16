@@ -10,19 +10,14 @@ posted: new Date('8/18/2017')
   }
 </style>
 
-I put a lot of *trust* in the web. Ever since I wrote my first HTML document
-<small>(shown below)</small>; a tutorial on how to learn HTML. I taught myself
-the markup syntax since I wanted to use the source view on Homestead instead of
-the GUI. What you learn is that the beauty of HTML isn't so much its
-simplicity, so much as its *forgiving* and *giving* nature. You can write a
-bunch of not-so-well-formed markup and you get something back, <small>(notice
-anything off in my markup below)</small>? It's rewarding with real low-grade
-effort. The exact kind that is necessary to get interested. It enables small
-wins that capture interest and get you wanting more. The web primitives empower
-and pave a path for building and sharing, theoretically without getting
-frustrated. But, the reality is that memorizing HTML tags and CSS properties
-only gets you so far. JavaScript becomes a necessary evil to learn and
-understand in order to make your page interactive and functional.
+I put a lot of trust in the web. I've watched it grow for 15 years from when I
+created my first hosted web page, a tutorial on writing HTML, to working at
+Netflix on rich multimedia applications. What is amazing about this platform to
+me, is that I can look back on my original page and the knowledge is as
+relevant now as it was back then. Due to the forgiving nature of HTML, I was
+able to get started quickly, while making lots of mistakes, and end up with a
+page I was proud of. It became a gateway drug for me into the world of
+JavaScript.
 
 <a href="/post/going-beyond-innerhtml/assets/html.jpg">
   <img
@@ -32,7 +27,28 @@ understand in order to make your page interactive and functional.
   />
 </a>
 
-This is a long-winded way 
+One thing that made the web so accessible to me, while C++ and Perl
+I was
+terrible, but the web is forgiving and allowed me to incrementally improve my
+skills. Just like any art-medium. Functional concepts like purity are a goal to
+attain as a senior developer
+
+provided the perfect platform for
+incremental 
+
+Having wrote my first HTML document, a
+tutorial on how to learn HTML, 15 years ago and tools necessary were only . I
+taught myself the markup syntax since I wanted to use the source view on
+Homestead instead of the GUI. What you learn is that the beauty of HTML isn't
+so much its simplicity, so much as its forgiving and giving nature. You can
+write a bunch of not-so-well-formed markup and you get something back,
+<small>(notice anything off in my markup below)</small>? It's rewarding with
+real low-grade effort. The exact kind that is necessary to get interested. It
+enables small wins that capture interest and get you wanting more. The web
+primitives empower and pave a path for building and sharing, theoretically
+without getting frustrated. But, the reality is that memorizing HTML tags and
+CSS properties only gets you so far. The web is a triforce with JavaScript
+being required for your page to be dynamic.
 
 What if new developers could take this knowledge:
 
