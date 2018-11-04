@@ -1,0 +1,46 @@
+<my-grid @wrap><span>Inside a CSS Grid</span></my-grid>
+
+<script>
+  class MyGrid extends HTMLElement {
+    template = html`
+      <div style={styles}>{childNodes}</div>
+    `
+
+    style = `
+      --template-columns: repeat(12, minmax(auto, 1fr));
+      --column-gap: 16px;
+
+      display: grid;
+      gridTemplateColumns: var(--template-columns);
+      gridColumnGap: var(--column-gap);
+    `
+
+    wrap = false
+
+    set wrap(wrap) {
+      const { style } = this;
+
+      if (wrap) {
+        style.setProperty('--template-columns', 'repeat(auto-fit, 100px)');
+      }
+      else {
+        style.removeProperty('--template-columns');
+      }
+
+      this.render();
+    }
+
+    constructor() {
+      super();
+
+      this.attachShadow({ mode: 'open', style: 'cascade' });
+      this.render();
+    }
+
+    render() {
+      this.template.render(shadowRoot, this);
+    }
+  }
+
+  customElements.define('my-grid', MyGrid);
+</script>

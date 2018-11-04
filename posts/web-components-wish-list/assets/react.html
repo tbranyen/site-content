@@ -1,0 +1,12 @@
+<some-react-component>
+  <p>This will be part of the SomeReactComponent tree</p>
+  <p id="changeme">Change me!</p>
+</some-react-component>
+
+<script>
+  // After one second, change the DOM.
+  setTimeout(() => {
+    // Now the React tree is invalid.
+    changeme.innerHTML = '<span>Whoops</span>';
+  }, 1000);
+</script>
