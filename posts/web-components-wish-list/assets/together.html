@@ -1,46 +1,57 @@
-<my-grid @wrap><span>Inside a CSS Grid</span></my-grid>
+<rad-button
+  @color="red"
+  @onClick={evt => console.log(evt.target)}
+  @innerHTML={`
+    <span>Inside a Rad Button</span>
+  `}
+/>
 
 <script>
-  class MyGrid extends HTMLElement {
-    template = html`
-      <div style={styles}>{childNodes}</div>
+  class RadButton extends HTMLElement {
+    template = `
+      <button @onClick={props.onClick}>{innerHTML}</button>
     `
 
     style = `
-      --template-columns: repeat(12, minmax(auto, 1fr));
-      --column-gap: 16px;
-
-      display: grid;
-      gridTemplateColumns: var(--template-columns);
-      gridColumnGap: var(--column-gap);
+      --color: ${this.props.color};
+      color: var(--color);
     `
 
-    wrap = false
+    props = {
+      onClick: null,
+      color: 'black',
+    }
 
-    set wrap(wrap) {
-      const { style } = this;
-
-      if (wrap) {
-        style.setProperty('--template-columns', 'repeat(auto-fit, 100px)');
-      }
-      else {
-        style.removeProperty('--template-columns');
-      }
-
+    set onClick(label) {
+      this.props.onClick = onClick;
       this.render();
     }
 
-    constructor() {
-      super();
+    set color(color) {
+      const { props, style } = this;
 
-      this.attachShadow({ mode: 'open', style: 'cascade' });
-      this.render();
+      props.color = color;
+
+      if (color) {
+        style.setProperty('--color', color); 
+      }
+      else {
+        style.removeProperty('--color');
+      }
+    }
+
+    get onClick() {
+      return this.props.onClick;
+    }
+
+    get color() {
+      return this.props.color;
     }
 
     render() {
-      this.template.render(shadowRoot, this);
+      this.template.render(this);
     }
   }
 
-  customElements.define('my-grid', MyGrid);
+  customElements.define('rad-button', RadButton);
 </script>

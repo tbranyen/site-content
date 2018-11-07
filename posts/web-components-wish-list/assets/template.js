@@ -1,24 +1,28 @@
 class RadButton extends HTMLElement {
   template = `
-    <button @innerText={label}></button>
+    <button @onClick={props.onClick}>{innerHTML}</button>
   `
 
-  label = null
+  style = `
+    --color: var(--rad-button-color, #000);
+    color: var(--color);
+  `
 
-  set label(label) {
+  props = {
+    onClick: null,
+  }
+
+  set onClick(label) {
+    this.props.label = label;
     this.render();
   }
 
-  constructor() {
-    super();
+  get onClick() {
+    return this.props.onClick;
+  }
 
-    const template = assign(document.createElement('template'), {
-      innerHTML: this.template,
-    });
-
-    this.render = () => template.render(this, {
-      label: this.label,
-    });
+  render() {
+    this.template.render(this);
   }
 }
 

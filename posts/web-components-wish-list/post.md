@@ -1,28 +1,45 @@
 title: 'Web Components v2 Wish List'
 tags: ['web components', 'html', 'javascript', 'react']
-posted: new Date('11/04/2018')
+posted: new Date('11/07/2018')
 
 Web Components v1 are a landmark achievement that render identically in stable
-versions of Firefox, Safari, and Chrome. Now that the dust has settled, it
-seems like the ideal time to ask standards authors and browser vendors for
-more!
+versions of Firefox, Safari, and Chrome. While they are fantastic in concept,
+they are clunky to use raw, and do not integrate well with React components.
+
+When I look at proposals created by the **w3c** community to help move this
+specification forward, I'm confused as to who the target audience is. Browser
+vendors or application developers?
+
+I specifically want to call out two proposals:
+
+- [Shadow DOM Cascade Order](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Shadow-DOM-Cascade-Order-in-v1.md)
+- [Template Instantiation](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Template-Instantiation.md)
+
+Who are these for? When I read [Pro Web Component / Anti React posts like
+this](https://dev.to/ben/why-the-react-community-is-missing-the-point-about-web-components-1ic3),
+it would seem that Web Components are a powerful specification that solve the
+same problems and are a suitable substitute for React, but that doesn't line up
+with my experience. I lean closer to the [camp that wants the web to
+learn from React](https://twitter.com/mjackson/status/1050600496992374785).
 
 My feedback is provided in the form of **wishes**: problems I hope get fixed,
-but not necessarily in the way I envision. I am not a specification author, so
-I fully acknowledge my suggested solutions may not make sense to the standards
-community. My hope is that they will take the problems and use cases into
-consideration, seeing the suggestions as exercises.
+but not necessarily in the way I envision. These are problems from the
+perspective of a developer who has written a Web Component VDOM library, works
+on a React -> WC bridge, and wants to create a design system as Web Components.
 
-To the relevant spec authors and browser vendors out there, I have three wishes
-for you:
+As I am not a specification author, I fully acknowledge my suggested solutions
+may not make sense to this community, as their proposals do not make sense to
+me. My hope is that they will take the problems and use cases into
+consideration, seeing the suggestions as only exercises. Also understanding
+that React developers could easily integrate and benefit from Custom Elements
+if they weren't limited in the respective ways outlined below.
 
-<p>&nbsp;</p>
+To these spec authors and browser vendors out there, I have three wishes for
+you:
 
 - [Improve Shadow DOM](#-129310-wish-1-decouple-dom-from-style-encapsulation)
 - [Extend the HTML grammar](#-wish-2-extend-the-html-grammar-to-support-property-setting)
 - [Make Templates happen](#-wish-3-expose-html-templates-as-reactive-functions)
-
-<p>&nbsp;</p>
 
 ## &#129310; Wish #1: Decouple DOM from Style Encapsulation
 
@@ -102,21 +119,20 @@ is gone.
 
 ## &#129310; Wish #2: Extend the HTML grammar to support property setting
 
-Quick, what is common between every modern view rendering engine? If you
-guessed custom logic for handling the setting of properties vs attributes, then
-you are a mind reader, and probably think about this stuff too much. This
-feature is critically required and can take direct influence from highly
-popular existing frameworks/standards such as: JSX, lit-html, and Vue.
+A very common implementation detail that every framework that renders HTML needs
+to address is setting properties vs attributes. This feature is critically
+required and can take direct influence from highly popular existing
+frameworks/standards such as: JSX, lit-html, and Vue. I have heard there is
+some movement around unifying the `observedAttributes` to properties, but I am
+dubious if this can truly replace distinct property vs attribute handling.
 
-Asking developers to gain a reference to a DOM node to imperatively set
-properties is a non-starter, and should never have been brought up as a
-solution in the first place. Whenever developers criticize Custom Elements,
-it's because of hand-waving over the best parts of JSX/Vue/HyperScript/Ember
-Handlebars/etc.
+The current approach to handling properties with a vanilla Web Component is
+to gain a reference to the DOM node and imperatively set properties. This is a
+non-starter for a React developer used to a declarative approach.
 
 There will be issues, such as `attributes` and `Attr` having existing
 incompatible behavior, but instead of firmly rooting HTML in the past, can we
-extend it to support the future? 
+extend it to support the future of Custom Elements? 
 
 ### &#9758; My Suggestion
 
@@ -171,20 +187,34 @@ not have nested children.
 
 {{'self-closing.html'|render}}
 
-## &#129310; Wish #3: Expose HTML Templates as reactive functions
+## &#129310; Wish #3: Make HTML Templates more powerful
 
-HTML Templates are currently one of the most useless features of Web
-Components. They are an artifact from a bygone development era, and need either
-a caffiene injection or a swift kick in the butt out of the way. Given the
-features requested above, I believe this opens the door to greatly improving
-the `<template>` tag.
+HTML Templates are currently one of the most useless features of the Web
+Components stack. They are an artifact from a bygone development era, and
+require either a caffeine injection or a swift kick in the butt out of the
+spec. This wish is very related to the [Template
+Instantiation](https://github.com/w3c/webcomponents/blob/gh-pages/proposals/Template-Instantiation.md)
+proposal, linked at the top, but I think is closer aligned to what web 
+developers will expect.
 
-### &#9758; My Suggestion
+With the other requested features in this post, I believe the `<template>`
+tag can become truly powerful.
 
-Expose a `render` method on `<template>` tags which binds the markup and
-interpolated properties to a passed DOM node. Keep them in sync whenever the
-render function is called with new values, which are provided as the `context`
-of the template.
+### &#9758; My Suggestions
+
+Introduce a `template` property to DOM Node's that mimics the behavior of the
+`style` property. You set a template literal to this property and it will
+create a backing `HTMLTemplate` element instance and assign it to this
+property. When class properties land, this will be the ideal way to
+declaratively set a template. This will automatically become the contents of
+the component instance. If the user wants to transclude, they can interpolate
+the `innerHTML` of the instance. If a Shadow Root exists, that will be used
+instead.
+
+Expose a `render` method on the `<template>` elements, which binds the markup
+and interpolated properties to a passed DOM node. Keep them in sync whenever
+the render function is called with new values, which are provided as the
+`context` of the template.
 
 {{'template.js'|render}}
 
@@ -192,25 +222,12 @@ This `render` method should emulate what a Virtual DOM accomplishes, where only
 updated nodes and attributes are changed. This would make it highly suitable
 for pairing with a Custom Element that is reactive.
 
-## &#129310; Wish #3.5: Expose an `html` tagged template helper
-
-This tagged template helper would remove the tedious task of creating a
-`<template>` node, setting the `innerHTML`, provide a mapping for interpolated
-values, and then coming up with a new name to differentiate between the string
-template contents, and template instance.
-
-### &#9758; My Suggestion
-
-Introduce a tagged template helper to help create a template tag with contents
-from JavaScript with a few extra bells and whistles.
-
-{{'tagged-template.js'|render}}
-
 ## Putting it all together
 
-With these changes in place, porting a React Grid component to Web Components
-becomes significantly easier and much more powerful. Significantly less
-plumbing occurs with this solution as well. Below you will find a full example
-using these changes to render a trivial Grid component.
+With these changes in place, porting React components to Web Components becomes
+significantly easier and writing raw Web Components starts to match the
+declarative and reactive beauty of React. Significantly less plumbing occurs
+with this solution as well. Below you will find a full example using these
+changes to render a trivial Grid component.
 
 {{'together.html'|render}}
