@@ -37,9 +37,9 @@ if they weren't limited in the respective ways outlined below.
 To these spec authors and browser vendors out there, I have three wishes for
 you:
 
-- [Improve Shadow DOM](#-129310-wish-1-decouple-dom-from-style-encapsulation)
+- [Improve Shadow DOM](#-wish-1-decouple-dom-from-style-encapsulation)
 - [Extend the HTML grammar](#-wish-2-extend-the-html-grammar-to-support-property-setting)
-- [Make Templates happen](#-wish-3-expose-html-templates-as-reactive-functions)
+- [Make Templates happen](#-wish-3-make-html-templates-more-powerful)
 
 ## &#129310; Wish #1: Decouple DOM from Style Encapsulation
 
