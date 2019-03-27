@@ -76,10 +76,10 @@ following values:
 ### &#129304; Use case: React owns the DOM
 
 On the surface, rendering a React component as a Web Component seems fairly
-straight-forward. When the mounted, render the backing Component into the
-Custom Element (which is a DOM Node). The problem here is that this would put
-all React-rendered Nodes into the host document tree. This makes them available
-for any other scripts to unintentionally modify.
+straight-forward. When the DOM is mounted, render the backing Component
+into the Custom Element (which is a DOM Node). The problem here is that this
+would put all React-rendered Nodes into the host document tree. This makes them
+available for any other scripts to unintentionally modify.
 
 This is a problem, because React snapshots the state of the DOM after rendering
 and expects that exact state to remain unchanged. If it does change, React will
